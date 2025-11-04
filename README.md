@@ -43,37 +43,43 @@ This application uses CrewAI agents powered by Google's Gemini 2.0 Flash to scra
 ### Local Setup
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/faisalquaiyum/podcast-generator.git
    cd podcast-generator
    ```
 
 2. **Create a virtual environment**
+
    ```bash
    python -m venv .venv
    ```
 
 3. **Activate the virtual environment**
-   
+
    On Windows (PowerShell):
+
    ```powershell
    .\.venv\Scripts\Activate.ps1
    ```
-   
+
    On macOS/Linux:
+
    ```bash
    source .venv/bin/activate
    ```
 
 4. **Install dependencies**
+
    ```bash
    pip install --upgrade pip
    pip install -r requirements.txt
    ```
 
 5. **Set up environment variables**
-   
+
    Create a `.env` file in the project root:
+
    ```env
    GEMINI_API_KEY=your_gemini_api_key_here
    FIRECRAWL_API_KEY=your_firecrawl_api_key_here
@@ -81,6 +87,7 @@ This application uses CrewAI agents powered by Google's Gemini 2.0 Flash to scra
    ```
 
 6. **Run the application**
+
    ```bash
    python app.py
    ```
@@ -133,11 +140,13 @@ Podcast Generator/
 
 ## 🤖 How It Works
 
-1. **Blog Scraper Agent**: 
+1. **Blog Scraper Agent**:
+
    - Uses Firecrawl to extract main content from blog URLs
    - Filters out navigation, ads, and non-essential elements
 
-2. **Blog Summarizer Agent**: 
+2. **Blog Summarizer Agent**:
+
    - Analyzes the scraped content
    - Creates a concise 500-700 word summary
    - Formats content for podcast delivery
@@ -150,16 +159,19 @@ Podcast Generator/
 ## 🔑 API Keys Setup
 
 ### Google Gemini API
+
 1. Visit [Google AI Studio](https://makersuite.google.com/app/apikey)
 2. Create a new API key
 3. Add to `.env` as `GEMINI_API_KEY`
 
 ### Firecrawl API
+
 1. Visit [Firecrawl](https://firecrawl.dev/)
 2. Sign up and get your API key
 3. Add to `.env` as `FIRECRAWL_API_KEY`
 
 ### ElevenLabs API
+
 1. Visit [ElevenLabs](https://elevenlabs.io/)
 2. Create an account and get your API key
 3. Add to `.env` as `ELEVENLABS_API_KEY`
@@ -172,6 +184,7 @@ This project is deployed on Hugging Face Spaces:
 **[https://huggingface.co/spaces/famyy/podcast-generator](https://huggingface.co/spaces/famyy/podcast-generator)**
 
 To deploy your own:
+
 1. Fork this repository
 2. Create a new Space on Hugging Face
 3. Connect your repository
@@ -208,5 +221,3 @@ This project is open source and available under the MIT License.
 If you have any questions or issues, please open an issue on the repository or visit the [Hugging Face Space](https://huggingface.co/spaces/famyy/podcast-generator).
 
 ---
-
-**Made with ❤️ using AI**
